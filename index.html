@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes"/>
+    <title>Test task</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.css"
+          integrity="sha512-otONSJGv1l0LjJXcgyqi2MeKXtnthkiXAleeQjFJOKYcVD5u+mOuPb7xCnlsb74Ld+N0ONbP7KYRmW2/OWrvaA=="
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Risque&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/id.css">
+    <link rel="stylesheet" href="styles/fullpage.css">
+    <link rel="stylesheet" href="styles/header.css">
+    <link rel="stylesheet" href="styles/snow.css">
+    <link rel="stylesheet" href="styles/star.css">
+    <link rel="stylesheet" href="styles/section_one.css">
+    <link rel="stylesheet" href="styles/section_two.css">
+    <link rel="stylesheet" href="styles/section_three.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Risque&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <img src="images/logo/logo.png" alt="Coca-Cola logo" id="logo">
+    <nav class="header_navigation_container">
+        <ul class="desktop_navigation_list">
+            <li><a href="#firstSection" data-name="Main">Main</a></li>
+            <li>
+                <a
+                        href="https://www.coca-colacompany.com/about-us"
+                        target="_blank"
+                        data-name="About"
+                >
+                    About
+                </a>
+            </li>
+            <li><a href="#secondSection" data-name="Products">Products</a></li>
+            <li><a href="#thirdSection" data-name="Contacts">Contacts</a></li>
+        </ul>
+        <div class="burger_menu_btn">
+            <button
+                    type="button"
+                    title="toggle burger menu"
+                    onclick="toggleBurgerMenu()"
+            >
+                <span class="burger_btn_bar_container">
+                    <span class="burger_menu_bar"></span>
+                    <span class="burger_menu_bar"></span>
+                    <span class="burger_menu_bar"></span>
+                </span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<div id="burger_menu">
+    <ul class="burger_menu_list">
+        <li>
+            <a
+                    href="#firstSection"
+                    class="burger_menu_link"
+                    onclick="handleBurgerMenuAfterLink()"
+            >
+                Home
+            </a>
+        </li>
+        <li>
+            <a
+                    href="https://investors.coca-colacompany.com/about"
+                    class="burger_menu_link"
+                    target="_blank"
+                    onclick="handleBurgerMenuAfterLink()"
+            >
+                About
+            </a>
+        </li>
+        <li>
+            <a
+                    href="#secondSection"
+                    class="burger_menu_link"
+                    onclick="handleBurgerMenuAfterLink()"
+            >
+                Products
+            </a>
+        </li>
+        <li>
+            <a
+                    href="#thirdSection"
+                    class="burger_menu_link"
+                    onclick="handleBurgerMenuAfterLink()"
+
+            >
+                Contacts
+            </a>
+        </li>
+    </ul>
+</div>
+
+<main id="snow_wrapper" class="star_wrapper">
+    <div id="fullPage">
+        <div class="section" id="section_one">
+            <div class="main_info_wrapper">
+                <div class="main_info_container">
+                    <h1>Main Site Title</h1>
+                    <p>Lorem ipsum descripsum</p>
+                </div>
+                <div class="main_info_btn_container">
+                    <button class="action_btn" type="button">Call to action</button>
+                </div>
+            </div>
+            <div id="santa_wrapper">
+                <img
+                        id="santa_mobile_image"
+                        src="images/screen_1/dedcoca4.png"
+                        alt="Santa holding a Coca-Cola"
+                >
+                <img
+                        id="santa_desktop_image"
+                        src="images/screen_1/dedcoca2.png"
+                        alt="Santa holding a Coca-Cola"
+                >
+                <div id="santa_speech_cloud">
+                    <img src="images/screen_1/Cloud.png" alt="A cloud with speech that emits from Santa">
+                    <div class="santa_speech_container">
+                        <p>How how how !!!</p>
+                        <p>Like it?</p>
+                        <p>Scroll down for more !</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section_two">
+            <div class="main_present_wrapper">
+                <div class="action_wrapper">
+                    <div class="main_heading_wrapper">
+                        <h2>At least somewhere you can feel new year atmosphere</h2>
+                    </div>
+                    <div class="choose_present_wrapper">
+                        <p>Choose your present:</p>
+                        <div class="choose_present_btn_container">
+                            <button type="button" title="choose a sock present" class="choose_present_btn sock_btn"
+                                    onclick="choosePresent(0)">
+                                <img
+                                        src="images/screen_2/sock-present.png"
+                                        alt="New Year sock with candies and a toy bear inside it"
+                                >
+                            </button>
+                            <button type="button" title="choose a hat present"
+                                    class="choose_present_btn hat_btn exclude_hover"
+                                    onclick="choosePresent(1)">
+                                <img
+                                        src="images/screen_2/cap-present.png"
+                                        alt="New Year hat"
+                                >
+                            </button>
+                            <button type="button" title="choose a bag present"
+                                    class="choose_present_btn bag_btn exclude_hover"
+                                    onclick="choosePresent(2)">
+                                <img
+                                        src="images/screen_2/bag-present.png"
+                                        alt="New Year bag with candies inside it"
+                                >
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="present_wrapper">
+                    <div class="chosen_present_wrapper">
+                        <section class="chosen_present_section">
+                            <img
+                                    src="images/screen_2/chosen-sock-present.png"
+                                    alt="New Year sock with candies and a toy bear inside it"
+                            >
+                            <div class="chosen_present_info_container">
+                                <h3>Best sock ever</h3>
+                                <p>
+                                    Regular sock have no
+                                    present inside
+                                    Lorem Ipsum is simply dumm y text of the printing and types etting industry. Lorem
+                                </p>
+                            </div>
+                        </section>
+
+                        <section class="chosen_present_section">
+                            <img
+                                    src="images/screen_2/chosen-sock-present.png"
+                                    alt="New Year sock with candies and a toy bear inside it"
+                            >
+                            <div class="chosen_present_info_container">
+                                <h3>Best hat ever</h3>
+                                <p>
+                                    Regular hat have no
+                                    present inside
+                                    Lorem Ipsum is simply dumm y text of the printing and types etting industry. Lorem
+                                </p>
+                            </div>
+                        </section>
+
+                        <section class="chosen_present_section">
+                            <img
+                                    src="images/screen_2/chosen-sock-present.png"
+                                    alt="New Year sock with candies and a toy bear inside it"
+                            >
+                            <div class="chosen_present_info_container">
+                                <h3>Best bag ever</h3>
+                                <p>
+                                    Regular bag have no
+                                    present inside
+                                    Lorem Ipsum is simply dumm y text of the printing and types etting industry. Lorem
+                                </p>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section" id="section_three">
+            <div class="main_form_wrapper">
+                <h2>Write us
+                    <br/>
+                    for real presents</h2>
+                <form>
+                    <div class="input_wrapper">
+                        <label for="name">Name</label>
+                        <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                required
+                                oninput="checkInputValue(this.id)"
+                        >
+                    </div>
+                    <div class="input_wrapper">
+                        <label for="phone">Phone</label>
+                        <input
+                                type="text"
+                                id="phone"
+                                name="phone"
+                                required
+                                oninput="checkInputValue(this.id)"
+                        >
+                    </div>
+                    <div class="custom_select">
+                        <div class="select" onclick="toggleOptions()">
+                            <span id="selectedValue">Gender</span>
+                            <span class="custom_arrow down"></span>
+                        </div>
+                        <ul id="selectList" class="select_list hidden">
+                            <li onclick="selectOption('Boy')">Boy</li>
+                            <li onclick="selectOption('Girl')">Girl</li>
+                        </ul>
+                    </div>
+                    <div class="input_wrapper">
+                        <label for="email">Email</label>
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                required
+                                oninput="checkInputValue(this.id)"
+                        >
+                    </div>
+                    <div class="textarea_wrapper">
+                        <label for="wish" class="wish_label">Your wish</label>
+                        <textarea
+                                id="wish"
+                                name="email"
+                                required
+                                oninput="checkInputValue(this.id)"
+                        ></textarea>
+                    </div>
+                    <div class="checkbox_wrapper">
+                        <label for="present_checkbox">
+                            <input type="checkbox" id="present_checkbox" name="present_checkbox">
+                            <span class="checkbox-style"></span>
+                            Want Coca-cola with present ?
+                        </label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.20/fullpage.min.js"
+        integrity="sha512-LGiXf+jHGTHcIybSsOWO3I/in+OObCkcEsWIZ7IyhzfD6RzD5qDUw2CK+JveuI7zTSEcDG//bIOvOpAJW2BWsg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</script>
+<script>
+    let fullPageAPI = new fullpage('#fullPage', {
+        autoScrolling: true,
+        responsiveWidth: 1000,
+        anchors: ["firstSection", "secondSection", "thirdSection"],
+        onLeave: function (origin, destination, direction) {
+            const snowflakeElement = document.getElementById("snowflake");
+
+            if (snowflakeElement !== null) {
+                if (origin.index === 1 && direction === 'down') {
+                    snowflakeElement.style.display = "none";
+                } else if (origin.index === 1 && direction === 'up') {
+                    snowflakeElement.style.display = "block";
+                    snowflakeElement.style.left = "-224px";
+                    snowflakeElement.style.top = "351.7749938964844px";
+                    snowflakeElement.style.zIndex = "1";
+                } else {
+                    snowflakeElement.style.display = "block";
+                    snowflakeElement.style.left = "-218px";
+                    snowflakeElement.style.top = "-70.22500610351562px";
+                    snowflakeElement.style.zIndex = "2";
+                }
+            }
+        }
+    });
+</script>
+<script>
+    const burgerMenuElement = document.querySelector("#burger_menu");
+
+    const observer = new MutationObserver((mutations, observer) => {
+        for (const mutation of mutations) {
+            if (mutation.type === "attributes" && mutation.attributeName === "class") {
+                if (burgerMenuElement.classList.contains("is-open")) {
+                    document.querySelector("body").style.overflow = "hidden";
+                    fullPageAPI.setAllowScrolling(false);
+                } else {
+                    document.querySelector("body").style.overflow = "visible";
+                    fullPageAPI.setAllowScrolling(true);
+                }
+            }
+        }
+    });
+    const observerConfig = {attributes: true};
+
+    observer.observe(burgerMenuElement, observerConfig);
+</script>
+<script src="js/animations.js"></script>
+<script src="js/actions.js"></script>
+</body>
+</html>

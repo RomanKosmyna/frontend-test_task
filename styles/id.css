@@ -1,0 +1,241 @@
+#fullPage {
+    width: var(--w100);
+    z-index: 2;
+}
+
+#section_one,
+#section_two,
+#section_three {
+    width: var(--w100);
+}
+
+#section_one {
+    height: 845px;
+    background: transparent;
+    padding-top: 221px;
+}
+
+#section_two {
+    height: 1250px;
+    background-image: url("../images/screen_2/background-mobile.png");
+    padding-top: 100px;
+}
+
+#section_three {
+    height: 450px;
+    background-image: url("../images/screen_3/background-mobile.png");
+}
+
+#section_two,
+#section_three {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    overflow: hidden;
+}
+
+#logo {
+    transition: opacity 0.1s ease-in-out;
+}
+
+#logo.is-open {
+    opacity: 0;
+}
+
+#burger_menu {
+    height: 85px;
+    width: 85px;
+    position: fixed;
+    display: none;
+    align-items: var(--flex-center);
+    justify-content: flex-start;
+    border-radius: 50%;
+    top: 6px;
+    right: 15px;
+    transition-duration: 2s;
+    transform: scale(0.1);
+    background: var(--red-color);
+    z-index: 3;
+    animation: toggleBurgerMenu 1s ease-in-out forwards;
+}
+
+@keyframes toggleBurgerMenu {
+    0% {
+        transform: scale(0.1);
+    }
+    100% {
+        transform: scale(3);
+        width: 64vw;
+        height: 80vh;
+        top: -30vh;
+        right: -30vw;
+    }
+}
+
+#snowflake {
+    position: fixed;
+    z-index: 1;
+    top: 351.7749938964844px;
+    left: -224px;
+    display: block;
+    animation: rotation 30s linear infinite;
+    transition: top 0.2s ease-in, left 0.2s ease-in;
+}
+
+#present_wrapper {
+    width: var(--w100);
+    display: var(--flex-container);
+    flex-direction: column;
+    align-items: var(--flex-center);
+    padding: 0 27px;
+    margin-top: 15px;
+    margin-bottom: 80px;
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Wrappers */
+#snow_wrapper {
+    width: var(--w100);
+    height: var(--h100);
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 2;
+}
+
+#santa_wrapper {
+    width: var(--w100);
+    height: var(--h100);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#santa_mobile_image,
+#santa_desktop_image {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#santa_desktop_image {
+    display: none;
+}
+
+#santa_speech_cloud {
+    display: var(--flex-container);
+    justify-content: var(--flex-center);
+    position: relative;
+    left: 140px;
+    top: 180px;
+    width: 260px;
+    height: 166px;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+@media (min-width: 450px) {
+    #santa_mobile_image {
+        display: none;
+    }
+    #santa_desktop_image {
+        display: block;
+    }
+}
+
+@media (min-width: 650px) {
+    #section_two {
+        background: url("../images/screen_2/background-desktop.png");
+    }
+
+    #section_three {
+        background: url("../images/screen_3/background-desktop.png");
+    }
+
+    #section_two,
+    #section_three {
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+
+    #present_wrapper {
+        padding: 0;
+    }
+}
+
+@media (min-width: 700px) {
+    #present_wrapper {
+        margin-top: 35px;
+    }
+}
+
+@media (min-width: 1000px) {
+    #section_one,
+    #section_two,
+    #section_three {
+        height: 100vh;
+    }
+
+    #section_one {
+        padding-top: 253px;
+    }
+
+    #santa_wrapper {
+        width: 1000px;
+        height: 650px;
+    }
+
+    #santa_desktop_image {
+        width: 1000px;
+    }
+
+    #present_wrapper {
+        max-width: 440px;
+        height: 405px;
+        margin: 0;
+    }
+
+    @keyframes toggleBurgerMenu {
+        0% {
+            transform: scale(0.1);
+        }
+        100% {
+            transform: scale(3);
+            width: 50vw;
+            height: 80vh;
+            top: -30vh;
+            right: -30vw;
+        }
+    }
+}
+
+@media (min-width: 1250px) {
+    #present_wrapper {
+        max-width: 553px;
+    }
+
+    @keyframes toggleBurgerMenu {
+        0% {
+            transform: scale(0.1);
+        }
+        100% {
+            transform: scale(3);
+            width: 40vw;
+            height: 80vh;
+            top: -30vh;
+            right: -30vw;
+        }
+    }
+}

@@ -1,0 +1,29 @@
+.snowflake {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: white;
+    animation: snowfall linear infinite;
+    position: fixed;
+    z-index: 3;
+}
+
+@keyframes snowfall {
+    0% {
+        transform: translateY(-20vh) translateX(-15vh);
+    }
+    100% {
+        transform: translateY(200vh) translateX(10vh);
+    }
+}
+
+@media (min-width: 1000px) {
+    @keyframes snowfall {
+        0% {
+            transform: translateY(-20vh) translateX(-50vh);
+        }
+        100% {
+            transform: translateY(200vh) translateX(10vh);
+        }
+    }
+}

@@ -1,0 +1,22 @@
+.fp-watermark {
+    display: none;
+}
+
+.fp-section {
+    display: var(--flex-container);
+    justify-content: flex-start;
+}
+
+.fp-overflow {
+    max-height: initial;
+}
+
+.section {
+    z-index: 3;
+}
+
+@media (min-width: 1000px) {
+    .fp-overflow {
+        max-height: 100vh;
+    }
+}
